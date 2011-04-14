@@ -1,0 +1,30 @@
+XTerm*reverseVideo: on
+*VT100*reverseVideo: on
+XTerm*faceName: Monaco
+XTerm*faceSize: 9
+
+URxvt*background: Black
+URxvt*foreground: White
+URxvt*loginShell:true
+URxvt*font: xft:monaco:bold:size=8.5:antialias=true
+URxvt*scrollBar_right: true
+URxvt*saveLines: 32768
+URxvt.iso14755_52: false
+
+*color0:     rgb:00/00/00
+*color1:     rgb:ff/81/76
+*color2:     rgb:aa/fb/87
+*color3:     rgb:fe/fd/c9
+*color4:     rgb:14/78/12
+*color5:     rgb:a3/30/e6
+*color6:     rgb:a0/fe/ff
+*color7:     rgb:db/db/db
+*color8:     rgb:a1/d6/fb
+*color9:     rgb:fa/4a/49
+*color10:    rgb:4d/d1/4d
+*color11:    rgb:de/c7/39
+*color12:    rgb:1b/85/d6
+*color13:    rgb:e4/6b/ff
+*color14:    rgb:15/b9/eb
+*color15:    rgb:f4/f4/f4
+
