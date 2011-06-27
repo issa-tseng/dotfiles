@@ -10,6 +10,7 @@ sysmodmap=/usr/X11/lib/X11/xinit/.Xmodmap
 export TERM=rxvt-256color
 export SHELL=/bin/zsh
 export LANG=en_US.UTF-8
+export RXVT_SOCKET=$HOME/.rxvt-unicode-durindana
 
 if [ -f $sysresources ]; then
 

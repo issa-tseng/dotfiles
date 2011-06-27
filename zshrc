@@ -14,6 +14,7 @@ source $ZSH/oh-my-zsh.sh
 export CASE_SENSITIVE="true"
 export DISABLE_AUTO_UPDATE="true"
 export LANG="en_US.UTF-8"
+export RXVT_SOCKET=$HOME/.rxvt-unicode-durindana
 setopt prompt_subst
 unsetopt auto_name_dirs
 autoload -U compinit
@@ -38,6 +39,7 @@ alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 alias .......='cd ../../../../../../'
 alias ll='ls -l'
+alias git='noglob git'
 
 #DIRMARKS
 m1() { pwd > ~/.dirmarks/m1 }
