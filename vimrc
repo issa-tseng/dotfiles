@@ -20,6 +20,9 @@ set expandtab
 " whitespace
 set list listchars=tab:\ \ ,trail:·
 
+" insert mode
+set backspace=indent,eol,start
+
 " scrolling
 set scrolloff=3
 
