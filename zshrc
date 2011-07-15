@@ -1,5 +1,5 @@
 #PATH/ENV
-export PATH=/usr/local/bin:/usr/local/pgsql/bin:~/.cabal/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/pgsql/bin:~/.cabal/bin:/usr/local/Cellar/python/2.7.1/bin/:$PATH
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/X11/lib/pkgconfig
 export PGDATA=/usr/local/pgsql/data
 export EDITOR=vim
