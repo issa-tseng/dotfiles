@@ -77,6 +77,11 @@ syntax on
 " longer history (default is 20)
 set history=50
 
+" line numbering
+if v:version >= 703
+  set relativenumber
+endif
+
 " status line
 set laststatus=2
 set statusline=%y%{GetStatusEx()}%{fugitive#statusline()}%m%r%=:%l,%c
