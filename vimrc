@@ -30,24 +30,38 @@ set scrolloff=3
 "  set leader to <space>
 let mapleader = " "
 "  plugins
-nmap <silent> <D-i> :NERDTreeToggle<CR>
 map <Leader>c :NERDTreeToggle<CR>
-nmap <silent> <D-k> :FufFile **/<CR>
 map <Leader>t :FufFile **/<CR>
-nmap <silent> <D-j> :FufLine<CR>
-map <Leader>h :FufLine<CR>
+map <Leader>T :FufRenewCache<CR>:FufFile **/<CR>
+map <Leader>n :FufLine<CR>
+map <Leader>r :YRShow<CR>
+map <Leader>e :Extradite<CR>
 "  buffers
 nmap <silent> <D-S-Left> :bp<CR>
 map <Leader><Left> :bp<CR>
 nmap <silent> <D-S-Right> :bn<CR>
 map <Leader><Right> :bn<CR>
+map <Leader><Down> <C-^>
 "  autocompletion
 imap <S-Esc> <C-x><C-n>
-"  wrap next line
-inoremap <D-CR> <Esc>o
+"  editing mode
+""imap <D-CR> <Esc>o
 "  swap ' and `
 nnoremap ' `
 nnoremap ` '
+" easier to reach start/end of line
+map <Leader>h ^
+map <Leader>l $
+" easier pastebuffer register access
+map <Leader>j "+y
+map <Leader>k "+p
+" virtual line up/down
+nnoremap <up> gk
+nnoremap <down> gj
+vnoremap <up> gk
+vnoremap <down> gj
+inoremap <expr> <up> pumvisible() ? "<up>" : "<c-o>gk"
+inoremap <expr> <down> pumvisible() ? "<down>" : "<c-o>gj"
 
 " allow edited hidden buffers
 set hidden
