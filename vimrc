@@ -97,6 +97,14 @@ endfunction
 " plugins
 "  minibufexplorer
 let g:miniBufExplMapWindowNavArrows=1
+let g:miniBufExplCheckDupeBufs=0
+
+" fuzzyfinder
+let g:fuf_dir_exclude='(^|/)(\.(hg|git|bzr)|dev-server)($|/)'
+
+" nerdtree
+let g:NERDTreeDirArrows=0
+
 " pathogen plugin loader
 execute pathogen#infect()
 
