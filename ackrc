@@ -1,0 +1,12 @@
+# symlinks:
+--follow
+
+# mixed case detect:
+--smart-case
+
+# types:
+--type-set=sass=.sass,.scss
+--type-set=js=.json,.js
+--type-set=coffee=.coffee
+--type-set=csv=.csv
+--type-set=scala=.scala
