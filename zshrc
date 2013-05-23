@@ -1,5 +1,6 @@
 #PATH/ENV
-export PATH=/usr/local/bin:/usr/local/pgsql/bin:~/.cabal/bin:/usr/local/Cellar/python/2.7.1/bin/:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/pgsql/bin:~/.cabal/bin:/usr/local/Cellar/python/2.7.1/bin/:/usr/local/share/npm/bin:$PATH
+export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/X11/lib/pkgconfig
 export PGDATA=/usr/local/pgsql/data
 export EDITOR=vim
@@ -21,15 +22,14 @@ autoload -U compinit
 compinit -C
 
 #SOCRATA
-export OPSCODE_USER=clinttseng
+export OPSCODE_USER=cxlt
 export MAVEN_OPTS=-Xmx2048m
 alias ord1="export DOMAIN=ord1.socrata.com"
 alias sea1="export DOMAIN=sea1.socrata.com"
-vm() { ssh cxlt@vm$1.$DOMAIN }
-util() { ssh cxlt@util$1.$DOMAIN }
-lb() { ssh cxlt@lb$1.$DOMAIN }
+vm() { TERM=rxvt ssh cxlt@vm$1.$DOMAIN }
+util() { TERM=rxvt ssh cxlt@util$1.$DOMAIN }
+lb() { TERM=rxvt ssh cxlt@lb$1.$DOMAIN }
 metadb() { ssh cxlt@metadb$1.$DOMAIN }
-fetch_build() { wget "http://hudson.sea1.socrata.com/job/CoreServer/$1/artifact/core-http/target/scala_2.8.0/core-http_2.8.0-1.0.0.war"; }
 
 #ALIASES
 alias ..='cd ../'
@@ -40,27 +40,16 @@ alias ......='cd ../../../../../'
 alias .......='cd ../../../../../../'
 alias ll='ls -l'
 alias git='noglob git'
-
-#DIRMARKS
-m1() { pwd > ~/.dirmarks/m1 }
-m2() { pwd > ~/.dirmarks/m2 }
-m3() { pwd > ~/.dirmarks/m3 }
-m4() { pwd > ~/.dirmarks/m4 }
-m5() { pwd > ~/.dirmarks/m5 }
-alias g1='cd `cat ~/.dirmarks/m1`'
-alias g2='cd `cat ~/.dirmarks/m2`'
-alias g3='cd `cat ~/.dirmarks/m3`'
-alias g4='cd `cat ~/.dirmarks/m4`'
-alias g5='cd `cat ~/.dirmarks/m5`'
-
-#DIRS
-alias gp='cd ~/Documents/Programming'
+alias ftfy=fc
+acks() { ack $1 -G 'dev-server|packages|tiny_mce' --invert-file-match }
+ackt() { ack $1 -G 'test|tests' --invert-file-match }
 
 #AUTOJUMP (via brew)
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
+if [ -f `brew --prefix`/etc/autojump.zsh ]; then
+  . `brew --prefix`/etc/autojump.zsh
 fi
 
 #RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
