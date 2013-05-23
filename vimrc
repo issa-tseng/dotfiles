@@ -52,7 +52,7 @@ nnoremap ` '
 " allow edited hidden buffers
 set hidden
 
-" enable filetype detection for snippets
+" enable filetype detection
 filetype on
 filetype plugin on
 filetype indent on
@@ -78,3 +78,6 @@ endfunction
 " plugins
 "  minibufexplorer
 let g:miniBufExplMapWindowNavArrows=1
+" pathogen plugin loader
+execute pathogen#infect()
+
