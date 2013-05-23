@@ -5,9 +5,12 @@ set guioptions=mRr
 set lines=62
 set columns=115
 
+" mouse
 set mousehide
 
-set guifont=Monaco:h12
+" font
+set guifont=Monaco\ 8
 
 " set colors
 colorscheme twilight
+
