@@ -1,0 +1,26 @@
+fontName = "Monaco"
+fontSize = 12
+
+incl = ".gitignore,.rvmrc"
+fileBrowserGlob = "{*,$incl}"
+include = "{$include,$incl}"
+
+excl = "log,vendor,tmp,dev-server"
+excludeInFileChooser = "{$excludeInFileChooser,$excl}"
+excludeInFolderSearch = "{$excludeInFolderSearch,$excl}"
+
+TM_GIT = "/usr/local/bin/git"
+
+softWrap = false
+softTabs = true
+tabSize = 4
+
+windowTitle = "$TM_DISPLAYNAME : ${TM_DIRECTORY/(\/Users\/[Cc]lint\/(blist|Code(\/blist)?)\/)//}"
+
+[ text ]
+spellChecking = false
+spellingLanguage = 'en'
+
+[ *.{rb,erb} ]
+tabSize = 2
+
